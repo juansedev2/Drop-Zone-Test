@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+:root{
+    --background-color-body : rgb(239, 239, 239);
+    --border-form-color : rgb(0, 0, 0);
+    --buttons-text-color :rgb(226, 226, 226);
+    --buttons-previous-view-color :rgb(0, 98, 0);
+    --buttons-previous-view-hover-color :green;
+    --buttons-submit-color : rgb(5, 75, 136);
+    --buttons-submit-hover-color : rgb(7, 88, 159);
+    --buttons-size : 1.2rem;
+}
+body{
+    background-color: var(--background-color-body)
+}
+form{
+    max-width: 500px;
+    margin: 3vw auto;
+    border: 1px solid var(--border-form-color);
+    border-radius: 5px;
+    padding: 30px;
+    background-color: azure;
+}
+form h1{
+    text-align: center;
+}
+form div.input-containers{
+    margin: 12px 0;
+    padding: 2px 0;
+}
+div.iti{
+    width: 100%;
+}
+form label{
+    display: inline-block;
+    margin: 2px 0;
+}
+input{
+    width: 100%;
+    height: 20px;
+}
+textarea {
+    width: 100%;
+}
+div.dropzone{
+    text-align: center;
+}
+div.form-buttons{
+    text-align: center;
+}
+div.form-buttons button{
+    margin: 5px 10px;
+}
+div.phone-container{
+    padding: 0;
+    margin: 0;
+}
+div.phone-container div.iti div.iti--allow-dropdown{
+    padding: 0;
+}
+button#previous-form-button{
+    color: var(--buttons-text-color);
+    background-color: var(--buttons-previous-view-color);
+    border: 1px solid var(--buttons-previous-view-color);
+    border-radius: 5px;
+    font-size: var(--buttons-size);
+    padding: 5px;
+}
+button#previous-form-button:hover{
+    background-color: var(--buttons-previous-view-hover-color);
+}
+button#send-form-button:hover{
+    background-color: var(--buttons-submit-hover-color);
+}
+button#send-form-button{
+    color: var(--buttons-text-color);
+    background-color: var(--buttons-submit-color);
+    border: 1px solid var(--buttons-submit-color);
+    border-radius: 5px;
+    font-size: var(--buttons-size);
+    padding: 5px;
+}
+input[type="file"]{
+    display: none;
+}

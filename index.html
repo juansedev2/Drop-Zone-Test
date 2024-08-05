@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Zone Test</title>
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <main>
+        <form action="./backend/View.php" method="post" id="staff-form" class="drop" enctype="multipart/form-data">
+            <div>
+                <h1>Formulario</h1>
+            </div>
+            <div id="errors-section"></div>
+            <div class="input-containers">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" minlength="3" maxlength="30" required>
+            </div>
+            <div class="input-containers">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="phone-container">
+                <label for="phone">Teléfono</label>
+                <div class="alert alert-info" style="display: none;"></div>
+                <input type="tel" id="phone" name="phone" maxlength="18" required>
+            </div>
+            <div class="input-containers">
+                <label for="position">Cargo</label>
+                <input type="text" name="position" id="position" placeholder="Ingresa el cargo del colaborador" maxlength="25" required>
+            </div>
+            <div class="input-containers">
+                <label>Tu foto</label>
+            </div>
+            <div class="dropzone" id="my-dropzone" >
+                <input type="hidden" name="MAX_FILE_SIZE" value="9242880" readonly/>
+            </div>
+            <div class="input-containers">
+                <label for="description">Descripción del cargo</label>
+                <textarea name="description" id="description" rows="5" maxlength="150" required></textarea>
+            </div>
+            <div class="form-buttons" class="input-containers">
+                <button id="previous-form-button" type="button">Vista previa</button>
+                <button id="send-form-button" type="button">Introducir colaborador</button>
+            </div>
+        </form>
+    </main>
+    <div>
+    </div>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/ValidateFunctions.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
